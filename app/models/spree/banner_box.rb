@@ -38,6 +38,11 @@ module Spree
       self.position = last_banner ? last_banner.position + 1 : 0
       enhance_settings
     end
+
+    def create!(*args)
+      enhance_settings
+      super(*args)
+    end
     
     # for adding banner_boxes which are closely related to existing ones
     # define "duplicate_extra" for site-specific actions, eg for additional fields
