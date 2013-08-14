@@ -1,12 +1,12 @@
 <% content_for :page_title do %>
-	<%= t(:listing_banner_boxes) %>
+	<%= Spree.t(:listing_banner_boxes) %>
 <% end %>
 
 <% content_for :page_actions do %>
 	<div class="toolbar" data-hook="toolbar">
 		<ul class="actions header-action-links inline-menu">
 			<li id="new_banner_box_link">
-				<%= button_link_to t(:new_banner_box), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_banner_box' } %>
+				<%= button_link_to Spree.t(:new_banner_box), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_banner_box' } %>
 			</li>
 		</ul>
 	</div>
@@ -27,9 +27,9 @@
 </colgroup>
 <thead>
 	<tr data-hook="admin_products_index_headers">
-		<th colspan="2"><%= t(:thumbnail) %></th>
-		<th><%= t(:category) %></th>
-		<th><%= t(:url) %></th>
+		<th colspan="2"><%= Spree.t(:thumbnail) %></th>
+		<th><%= Spree.t(:category) %></th>
+		<th><%= Spree.t(:url) %></th>
 		<th data-hook="admin_products_index_header_actions" class="actions"></th>
 	</tr>  
 </thead>  
@@ -45,7 +45,7 @@
 		<td class="actions" data-hook="admin_products_index_row_actions">
 			<%= link_to_edit banner_box, :no_text => true, :class => 'edit' %>
 			&nbsp;
-			<%= link_to_with_icon 'icon-copy', t(:clone), clone_admin_banner_box_url(banner_box), :no_text => true, :class => 'clone' %>
+			<%= link_to_with_icon 'icon-copy', Spree.t(:clone), clone_admin_banner_box_url(banner_box), :no_text => true, :class => 'clone' %>
             &nbsp;
 			<%= link_to_delete banner_box, :no_text => true %>
 		</td>
@@ -55,7 +55,7 @@
 </table>
 <% else %>
 <div class="no-objects-found">
-	<%= t(:no_results) %>
+	<%= Spree.t(:no_results) %>
 </div>
 <% end %>
 
